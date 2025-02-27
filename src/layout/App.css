@@ -1,0 +1,396 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+* {
+    font-family: 'NanumSquare';
+    list-style: none;
+    user-select: none;
+}
+
+/*(S) 검색 영역*/
+
+.searchArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selOpt {
+  width: 120px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 4px 4px 5px #00000015;
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+}
+
+#selOpt > option {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.selDate {
+  width: 300px;
+  height: 19px;
+  padding: 8px;
+  margin: 8px;
+  margin-right: 100px;
+  background: white;
+  border: solid 1px gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 4px 4px 5px #00000015;
+  font-size: 17px;
+}
+
+.datePicker {
+  width: 260px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 17px;
+  user-select: none;
+}
+
+/* 달력 창 */
+.react-datepicker {
+  width: 328px;
+  height: 280px;
+  background-color: #FCFCFC;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.15);
+  border: none;
+  user-select: none;
+}
+
+.react-datepicker-wrapper input:focus{
+  outline: none;
+}
+
+.react-datepicker__header {
+  background-color: #FCFCFC;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker__month-container {
+  position: absolute;
+  right: 0;
+}
+
+.custom-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FCFCFC;
+}
+
+.react-datepicker__day-names {
+  display: none;
+}
+
+.react-datepicker__day:hover:not([aria-disabled=true]) {
+  cursor: pointer;
+  color: black;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+}
+
+/* 범위 내 날짜 스타일 */
+.react-datepicker__day--in-range,
+.react-datepicker__day--in-range:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-selecting-range:hover:not([aria-disabled=true]) {
+  cursor: pointer;
+  color: black;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range, .react-datepicker__month-text--in-range, .react-datepicker__quarter-text--in-range, .react-datepicker__year-text--in-range) {
+  cursor: pointer;
+  color: black;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--selected {
+  background-color: #E9E9E9;
+  color: black;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--outside-month {
+  cursor: default;
+  border-radius: 50%;
+  color: lightgray;
+}
+
+.react-datepicker-ignore-onclickoutside {
+  caret-color: transparent; /* 깜박이는 커서 제거 */
+}
+
+.custom-header span {
+  padding: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btnArrow {
+  cursor: pointer;
+}
+
+.selRange {
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 2px;
+}
+
+.selRange > li {
+  width: 65px;
+  height: 12px;
+  list-style: none;
+  padding: 8px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.selRange > li:hover, .selRange > li.selected {
+  background: #D9E8FF;
+  color: #0066FF;
+}
+
+.division {
+  width: 1px;
+  height: 100%;
+  background: #DADADA;
+  position: absolute;
+  top: 0;
+  left: 88px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+}
+
+.calBtn {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.calBtn:hover {
+  opacity: 0.8;
+}
+
+#btnOk {
+  background: #0066FF;
+}
+
+#btnCancel {
+  background: #B1B1B1;
+}
+
+.calIcon {
+  right: 0;
+}
+
+.inputArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputText {
+  width: 300px;
+  height: 19px;
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 4px 4px 5px #00000015;
+  outline: none;
+}
+
+.btnSearch {
+  width: 100px;
+  height: 35px;
+  padding: 8px;
+  margin: 8px;
+  background: #292929;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 4px 4px 5px #00000015;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSearch > img {
+  width: 28px;
+}
+
+.btnSearch:hover {
+  opacity: 0.8;
+}
+/*(E) 검색 영역*/
+
+/*(S)공고 목록*/
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 1150px;
+  height: fit-content;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 18px #00000025;
+  margin-top: 10px;
+}
+
+.content-title {
+  height: 20px;
+  padding: 16px;
+  margin-left: 8px;
+  font-size: 18px;
+  cursor: default;
+}
+
+.th {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #F5F9FC;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: default;
+}
+
+.th li {
+  width: 150px;
+  text-align: center;
+}
+
+.th li:nth-child(4) {
+  width: 500px;
+}
+
+.td {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: 1px solid #828282;
+}
+
+.td li {
+  width: 150px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.td li:nth-child(4) {
+  width: 600px;
+  text-align: left;
+}
+
+.td a {
+  text-decoration: none;
+  color: #0066FF;
+}
+
+.td a:hover {
+  opacity: 0.6;
+}
+
+li.recruiting {
+  color: #cf9d14;
+}
+
+li.complete {
+  color: #E42F17;
+}
+/*(E) 공고 목록*/
+
+/*(S) Footer*/
+.footer {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 52px;
+}
+
+.moveTop {
+  width: 60px;
+  height: 60px;
+  color: black;
+  background: #F5F9FC;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 4px 4px 5px #00000015;
+}
+
+.moveTop:hover {
+  background: #e4e8eb;
+}
+/*(E) Footer*/
